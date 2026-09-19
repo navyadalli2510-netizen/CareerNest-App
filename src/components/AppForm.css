@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.app-form-container {
+  min-height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(
+    135deg,
+    #061427,
+    #0b1f3d,
+    #08172f
+  );
+
+  padding: 0 20px 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.profile-navbar {
+  width: 100%;
+  height: 80px;
+
+  background: #081425;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 40px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+  flex-shrink: 0;
+}
+
+.logo {
+  color: #e4e3e9;
+  font-size: 40px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.logo span {
+  color: #38b6ff;
+}
+
+/* =========================
+   BACK ARROW
+========================= */
+
+.back-arrow {
+  align-self: flex-start;
+
+  width: 42px;
+  height: 42px;
+
+  margin-top: 18px;
+  margin-left: 80px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #2864df;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  z-index: 10;
+}
+
+.back-arrow:hover {
+  background: #edf2ff;
+  border-color: #2864df;
+  transform: translateX(-2px);
+}
+
+.back-arrow:active {
+  transform: translateX(0);
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.app-form-card {
+  width: 100%;
+  max-width: 900px;
+
+  background: rgba(10, 18, 35, 0.95);
+
+  border: 1px solid rgba(0, 191, 255, 0.15);
+
+  border-radius: 24px;
+
+  padding: 40px;
+
+  color: white;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+  margin-top: 25px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.form-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.form-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+
+  color: white;
+}
+
+.form-header p {
+  color: #d3d3d3;
+  font-size: 1rem;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #00bfff;
+
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  background: #0d203f;
+
+  border: 1px solid rgba(0, 191, 255, 0.2);
+
+  color: white;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  font-size: 1rem;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #8fa4c2;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00bfff;
+
+  box-shadow: 0 0 0 2px rgba(0, 191, 255, 0.08);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit-btn {
+  width: 100%;
+
+  border: none;
+
+  padding: 18px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #00bfff,
+    #0099ff
+  );
+
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 0 18px rgba(0, 191, 255, 0.25);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.45);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .app-form-card {
+    max-width: 850px;
+  }
+
+  .back-arrow {
+    margin-left: 30px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .app-form-container {
+    padding: 0 15px 35px;
+  }
+
+  .profile-navbar {
+    height: 70px;
+    padding: 0 22px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .back-arrow {
+    align-self: flex-start;
+
+    width: 40px;
+    height: 40px;
+
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+
+  .app-form-card {
+    width: 100%;
+
+    padding: 25px 20px;
+
+    border-radius: 20px;
+
+    margin-top: 20px;
+  }
+
+  .form-header {
+    margin-bottom: 28px;
+  }
+
+  .form-header h1 {
+    font-size: 2rem;
+  }
+
+  .form-header p {
+    font-size: 0.9rem;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 13px;
+    font-size: 0.95rem;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .profile-navbar {
+    height: 65px;
+    padding: 0 18px;
+  }
+
+  .logo {
+    font-size: 27px;
+  }
+
+  .back-arrow {
+    width: 38px;
+    height: 38px;
+
+    margin-top: 14px;
+    margin-left: 0;
+  }
+
+  .app-form-card {
+    padding: 22px 17px;
+
+    border-radius: 18px;
+  }
+
+  .form-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .form-header p {
+    font-size: 0.85rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .submit-btn {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+}

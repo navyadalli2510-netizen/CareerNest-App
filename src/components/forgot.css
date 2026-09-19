@@ -1,0 +1,249 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #021032,
+        #001850,
+        #021032
+    );
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+.forgot-container{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.forgot-card{
+
+    width:480px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.logo-section{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.logo{
+
+    font-size:38px;
+    font-weight:700;
+    color:#021032;
+
+    margin-bottom:12px;
+
+}
+
+.logo span{
+
+    color:#42BFFF;
+
+}
+
+.logo-section h2{
+
+    font-size:28px;
+    color:#021032;
+
+    margin-bottom:10px;
+
+}
+
+.logo-section p{
+
+    color:#666;
+    font-size:15px;
+    line-height:24px;
+
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.input-box{
+
+    display:flex;
+    flex-direction:column;
+
+    margin-bottom:22px;
+
+}
+
+.input-box label{
+
+    margin-bottom:8px;
+
+    color:#021032;
+
+    font-weight:600;
+
+}
+
+.input-box input{
+
+    height:52px;
+
+    border:1px solid #D6E4F2;
+
+    border-radius:10px;
+
+    padding:0 16px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+    color:#021032;
+
+    background:#fff;
+
+}
+
+.input-box input::placeholder{
+
+    color:#999;
+
+}
+
+.input-box input:focus{
+
+    border-color:#42BFFF;
+
+    box-shadow:0 0 8px rgba(66,191,255,.35);
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.reset-btn{
+
+    width:100%;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#42BFFF;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.reset-btn:hover{
+
+    background:#2196F3;
+
+}
+
+/* ===========================
+   LOGIN LINK
+=========================== */
+
+.login-link{
+
+    margin-top:22px;
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+.login-link a{
+
+    margin-left:6px;
+
+    color:#42BFFF;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.login-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:600px){
+
+    .forgot-card{
+
+        width:100%;
+        padding:30px 24px;
+
+    }
+
+    .logo{
+
+        font-size:30px;
+
+    }
+
+    .logo-section h2{
+
+        font-size:24px;
+
+    }
+
+}

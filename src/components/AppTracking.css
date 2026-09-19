@@ -1,0 +1,388 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#081425;
+}
+
+/* PAGE */
+
+.track-page{
+    min-height:100vh;
+    background:#081425;
+    color:#fff;
+    padding:40px 8%;
+    position:relative;
+}
+
+
+
+.profile-navbar{
+    width:100%;
+    height:80px;
+    background:#081425;
+    display:flex;
+    align-items:center;
+    padding:0 40px;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+.logo{
+    color:#e4e3e9;
+    font-size:40px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#38B6FF;
+}
+
+.back-arrow {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #2864df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left : 100px;
+}
+
+.back-arrow:hover {
+  background: #edf2ff;
+  border-color: #2864df;
+  transform: translateX(-2px);
+}
+
+.back-arrow:active {
+  transform: translateX(0);
+}
+/* HEADER */
+
+.track-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.track-header h1{
+    font-size:42px;
+    margin-bottom:8px;
+}
+
+.track-header p{
+    color:#cbd5e1;
+    font-size:16px;
+}
+
+/* SEGMENT BUTTONS */
+
+.segment-control{
+    width:max-content;
+    margin:auto;
+    display:flex;
+    background:#132033;
+    padding:5px;
+    border-radius:50px;
+    margin-bottom:40px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.segment{
+    border:none;
+    background:transparent;
+    color:#94a3b8;
+    cursor:pointer;
+    padding:14px 34px;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.segment.active{
+    background:linear-gradient(90deg,#2563eb,#3b82f6);
+    color:white;
+}
+
+/* GRID */
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+
+.app-card{
+    background:#132033;
+    border-radius:18px;
+    padding:25px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.app-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.45);
+}
+
+.card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.card-top h2{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.company{
+    color:#d1d5db;
+    margin-bottom:8px;
+}
+
+.location{
+    color:#94a3b8;
+    margin-bottom:8px;
+}
+
+.card-top p{
+    margin:5px 0;
+}
+
+/* STATUS */
+
+.status{
+    padding:8px 16px;
+    border-radius:25px;
+    font-size:13px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.status.applied{
+    background:#22c55e;
+    color:white;
+}
+
+.status.pending{
+    background:#f59e0b;
+    color:white;
+}
+
+.status.hired{
+    background:#2563eb;
+    color:white;
+}
+
+.status.rejected{
+    background:#ef4444;
+    color:white;
+}
+
+.status.saved{
+    background:#8b5cf6;
+    color:white;
+}
+
+/* LINE */
+
+hr{
+    border:none;
+    height:1px;
+    background:#334155;
+    margin:20px 0;
+}
+
+/* APPLICANT INFO */
+
+.candidate-info{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    color:#dbe4ee;
+    font-size:15px;
+}
+
+/* FOOTER */
+
+.card-footer{
+    margin-top:25px;
+    display:flex;
+    gap:12px;
+}
+
+/* BUTTONS */
+
+.status-btn,
+.apply-btn,
+.remove-btn{
+    flex:1;
+    border:none;
+    cursor:pointer;
+    padding:12px;
+    border-radius:10px;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.status-btn{
+    background:#2563eb;
+}
+
+.status-btn:hover{
+    background:#1d4ed8;
+}
+
+.apply-btn{
+    background:#22c55e;
+}
+
+.apply-btn:hover{
+    background:#16a34a;
+}
+
+.remove-btn{
+    background:#ef4444;
+}
+
+.remove-btn:hover{
+    background:#dc2626;
+}
+
+/* EMPTY */
+
+.empty{
+    margin-top:120px;
+    text-align:center;
+}
+
+.empty h2{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.empty p{
+    color:#94a3b8;
+    font-size:16px;
+}
+
+.status-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    color:white;
+}
+
+.status-btn.applied {
+  background: orange;
+}
+
+.status-btn.accepted {
+  background: #28a745;
+}
+
+.status-btn.rejected {
+  background: #dc3545;
+}
+/* TABLET */
+
+@media(max-width:768px){
+
+.track-page{
+    padding:25px;
+}
+
+.back-btn{
+    position:static;
+    margin-left:auto;
+    margin-bottom:20px;
+    display:block;
+}
+
+.track-header h1{
+    font-size:32px;
+}
+
+.segment-control{
+    width:100%;
+}
+
+.segment{
+    flex:1;
+    padding:14px;
+}
+
+.card-grid{
+    grid-template-columns:1fr;
+}
+
+.card-top{
+    flex-direction:column;
+}
+
+.status{
+    align-self:flex-start;
+}
+
+.card-footer{
+    flex-direction:column;
+}
+
+.status-btn,
+.apply-btn,
+.remove-btn{
+    width:100%;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+.track-page{
+    padding:18px;
+}
+
+.track-header h1{
+    font-size:26px;
+}
+
+.track-header p{
+    font-size:14px;
+}
+
+.card-top h2{
+    font-size:20px;
+}
+
+.segment{
+    font-size:13px;
+    padding:12px;
+}
+
+.app-card{
+    padding:18px;
+}
+
+.candidate-info{
+    font-size:14px;
+}
+
+}

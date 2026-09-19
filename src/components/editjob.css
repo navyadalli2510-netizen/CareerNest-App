@@ -1,0 +1,421 @@
+/* =========================================================
+   EDIT JOB PAGE
+   ========================================================= */
+
+.addJobPage {
+    min-height: 100vh;
+    width: 100%;
+    background: #f5f7fb;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 45px 20px 70px;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.addJobContainer {
+    width: 100%;
+    max-width: 850px;
+
+    background: #ffffff;
+
+    padding: 35px 40px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.08);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.formHeader {
+    margin-bottom: 30px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #eef0f4;
+
+    padding-bottom: 22px;
+}
+
+
+.formHeader h1 {
+    margin: 0 0 8px;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+
+.formHeader p {
+    margin: 0;
+
+    font-size: 15px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.addJobContainer form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.formGroup {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.formGroup label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #374151;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+   ========================================================= */
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* INPUT */
+
+.formGroup input {
+    height: 46px;
+
+    padding: 0 13px;
+}
+
+
+/* SELECT */
+
+.formGroup select {
+    height: 46px;
+
+    padding: 0 13px;
+
+    cursor: pointer;
+}
+
+
+/* TEXTAREA */
+
+.formGroup textarea {
+    min-height: 120px;
+
+    padding: 12px 13px;
+
+    line-height: 1.5;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   BUTTON AREA
+   ========================================================= */
+
+.formButtons {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #eef0f4;
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+   ========================================================= */
+
+.cancelBtn {
+    height: 44px;
+
+    padding: 0 22px;
+
+    border-radius: 8px;
+
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.cancelBtn:hover {
+    background: #f9fafb;
+
+    border-color: #9ca3af;
+}
+
+
+/* =========================================================
+   UPDATE BUTTON
+   ========================================================= */
+
+.submitBtn {
+    height: 44px;
+
+    padding: 0 24px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.submitBtn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+.submitBtn:active {
+    transform: translateY(0);
+}
+
+
+.submitBtn:disabled {
+    background: #93c5fd;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.jobsLoading {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f5f7fb;
+
+    color: #2563eb;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .addJobPage {
+        padding: 25px 15px 50px;
+    }
+
+
+    .addJobContainer {
+        padding: 28px 22px;
+
+        border-radius: 12px;
+    }
+
+
+    .formHeader h1 {
+        font-size: 26px;
+    }
+
+
+    .formButtons {
+        justify-content: stretch;
+    }
+
+
+    .cancelBtn,
+    .submitBtn {
+        flex: 1;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .addJobPage {
+        padding: 15px 10px 40px;
+    }
+
+
+    .addJobContainer {
+        padding: 24px 16px;
+    }
+
+
+    .formHeader {
+        margin-bottom: 22px;
+    }
+
+
+    .formHeader h1 {
+        font-size: 23px;
+    }
+
+
+    .formHeader p {
+        font-size: 14px;
+    }
+
+
+    .addJobContainer form {
+        gap: 17px;
+    }
+
+
+    .formButtons {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .cancelBtn,
+    .submitBtn {
+        width: 100%;
+
+        flex: none;
+    }
+}

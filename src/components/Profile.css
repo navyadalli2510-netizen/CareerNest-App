@@ -1,0 +1,695 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:#081425;
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+.profile-page{
+    min-height:100vh;
+    background:#0B1833;
+    padding-bottom:60px;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.profile-navbar{
+    width:100%;
+    height:80px;
+    background:#081425;
+    display:flex;
+    align-items:center;
+    padding:0 40px;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+.logo{
+    color:#e4e3e9;
+    font-size:40px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#38B6FF;
+}
+
+.back-arrow {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #2864df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left : 100px;
+}
+
+.back-arrow:hover {
+  background: #edf2ff;
+  border-color: #2864df;
+  transform: translateX(-2px);
+}
+
+.back-arrow:active {
+  transform: translateX(0);
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.profile-header{
+
+    width:100%;
+    background:#0B1833;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:50px 20px 30px;
+
+}
+
+.avatar{
+
+    width:130px;
+    height:130px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#1E88E5,#38B6FF);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:55px;
+    font-weight:bold;
+    color:white;
+
+    border:5px solid white;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+.profile-header h2{
+
+    margin-top:18px;
+    color:white;
+    font-size:32px;
+    font-weight:700;
+
+}
+
+.profile-header p{
+
+    margin-top:8px;
+    color:#B9C7DD;
+    font-size:18px;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.profile-card{
+
+    width:92%;
+    max-width:1100px;
+
+    margin:30px auto;
+
+background: linear-gradient(135deg, #2FA6F6, #1D8FE3);
+
+
+    border-radius:18px;
+
+    padding:45px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.profile-card h2{
+
+    text-align:center;
+
+    font-size:32px;
+
+    color:#081425;
+
+    margin-bottom:40px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.input-group{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.input-group label{
+
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:10px;
+    color:#0B1833;
+
+}
+
+.input-group input{
+
+    width:100%;
+    height:55px;
+
+    border:1px solid #D7E1F0;
+    border-radius:12px;
+
+    padding:0 18px;
+
+    font-size:15px;
+
+    background:#ffffff;
+
+    color:#081425;      /* <-- Text color */
+
+    caret-color:#081425; /* <-- Cursor color */
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.input-group input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.input-group input:focus{
+
+    border-color:#2FA6F6;
+
+    box-shadow:0 0 10px rgba(47,166,246,.30);
+
+    color:#081425;
+
+    background:#ffffff;
+
+}
+
+.input-group input:disabled{
+
+    background:#F4F7FB;
+
+    color:#081425;
+
+    cursor:not-allowed;
+
+    opacity:1;
+
+}
+
+
+/* ===========================
+   TEXTAREA
+=========================== */
+
+.textarea{
+
+    margin-top:30px;
+
+}
+
+.textarea textarea{
+
+    width:100%;
+
+    resize:none;
+
+    border:1px solid #D7E1F0;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    background:#ffffff;
+
+    color:#081425;
+
+    caret-color:#081425;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.textarea textarea::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.textarea textarea:focus{
+
+    border-color:#2FA6F6;
+
+    box-shadow:0 0 10px rgba(47,166,246,.30);
+
+    background:#ffffff;
+
+    color:#081425;
+
+}
+
+.textarea textarea:disabled{
+
+    background:#F4F7FB;
+
+    color:#081425;
+
+    cursor:not-allowed;
+
+    opacity:1;
+
+}
+/* ===========================
+   BUTTON SECTION
+=========================== */
+
+.button-section{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.save-btn,
+.edit-btn{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    width:260px;
+
+    height:55px;
+
+    border-radius:12px;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.save-btn{
+
+    background:linear-gradient(135deg,#1E88E5,#38B6FF);
+
+}
+
+.save-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(30,136,229,.35);
+
+}
+
+.edit-btn{
+
+    background:#081425;
+
+}
+
+.edit-btn:hover{
+
+    background:#11264a;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+.profile-loading{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    color:white;
+
+    background:#081425;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   PLACEHOLDER
+=========================== */
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#9CA3AF;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#1E88E5;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#081425;
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.profile-card{
+
+    width:94%;
+
+    padding:35px;
+
+}
+
+.form-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.profile-header h2{
+
+    font-size:28px;
+
+}
+
+.profile-header p{
+
+    font-size:16px;
+
+}
+
+.logo{
+
+    font-size:34px;
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.profile-navbar{
+
+    height:70px;
+
+    padding:0 20px;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+}
+
+.profile-header{
+
+    padding:35px 20px;
+
+}
+
+.avatar{
+
+    width:100px;
+
+    height:100px;
+
+    font-size:42px;
+
+}
+
+.profile-header h2{
+
+    font-size:24px;
+
+}
+
+.profile-header p{
+
+    font-size:15px;
+
+}
+
+.profile-card{
+
+    width:95%;
+
+    padding:25px;
+
+    margin-top:20px;
+
+}
+
+.profile-card h2{
+
+    font-size:25px;
+
+    margin-bottom:30px;
+
+}
+
+.input-group label{
+
+    font-size:14px;
+
+}
+
+.input-group input{
+
+    height:50px;
+
+    font-size:14px;
+
+}
+
+.textarea textarea{
+
+    font-size:14px;
+
+}
+
+.save-btn,
+.edit-btn{
+
+    width:100%;
+
+    height:50px;
+
+    font-size:16px;
+
+}
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.profile-navbar{
+
+    padding:0 15px;
+
+}
+
+.logo{
+
+    font-size:26px;
+
+} 
+
+  .logo {
+    font-size: 2rem;
+    margin-left: 40px;
+    margin-top: 22px;
+  }
+
+  .back-arrow {
+    position: absolute;
+    top: 73px;
+    left: 1px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #2864df;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    cursor: pointer;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+  }
+
+  .back-arrow:hover {
+    background: #ffffff;
+    transform: none;
+  }
+
+  .back-arrow:active {
+    transform: none;
+  }
+
+
+.avatar{
+
+    width:85px;
+
+    height:85px;
+
+    font-size:35px;
+
+}
+
+.profile-header h2{
+
+    font-size:20px;
+
+}
+
+.profile-header p{
+
+    font-size:13px;
+
+}
+
+.profile-card{
+
+    padding:18px;
+
+}
+
+.profile-card h2{
+
+    font-size:22px;
+
+}
+
+.input-group input{
+
+    height:48px;
+
+    padding:0 14px;
+
+}
+
+.textarea textarea{
+
+    padding:14px;
+
+}
+
+}

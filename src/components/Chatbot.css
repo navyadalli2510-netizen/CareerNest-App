@@ -1,0 +1,535 @@
+/* Floating Button */
+/* =========================
+   CareerNest AI Chatbot CSS
+   ========================= */
+
+/* ---------- AI Launcher ---------- */
+
+.chat-btn {
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+  transition: .3s;
+  z-index: 2000;
+}
+
+.chat-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 18px 40px rgba(37,99,235,.45);
+}
+
+.chat-btn:active {
+  transform: scale(.95);
+}
+
+/* ---------- Tooltip ---------- */
+
+.tooltip{
+    position:fixed;
+    top:72px;
+    right:70px;
+    background:#ffffff;
+    color:#1e293b;
+    padding:10px 15px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    animation:fadeIn .4s ease;
+    z-index:1999;
+}
+
+.tooltip::after{
+    content:"";
+    position:absolute;
+    top:-6px;
+    right:18px;
+    width:12px;
+    height:12px;
+    background:white;
+    transform:rotate(45deg);
+}
+
+/* ---------- Chat Window ---------- */
+
+.chat-container{
+
+    position:fixed;
+
+    top:75px;
+    right:20px;
+
+    width:390px;
+    height:640px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+
+    box-shadow:
+        0 25px 60px rgba(15,23,42,.18);
+
+    transform:translateX(120%);
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s ease;
+
+    z-index:1998;
+
+}
+
+.chat-container.show{
+
+    transform:translateX(0);
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+/* ---------- Header ---------- */
+
+.chat-header{
+
+    background:linear-gradient(
+    135deg,
+    #1d4ed8,
+    #2563eb,
+    #4f46e5);
+
+    color:white;
+
+    padding:22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.chat-header h3{
+
+    margin:0;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.chat-header span{
+
+    display:block;
+
+    margin-top:3px;
+
+    font-size:12px;
+
+    opacity:.9;
+
+}
+
+/* ---------- Body ---------- */
+
+.chat-body{
+
+    flex:1;
+
+    padding:20px;
+
+    background:#f8fafc;
+
+    overflow-y:auto;
+
+}
+
+.chat-body::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.chat-body::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:20px;
+
+}
+
+/* ---------- Bot Message ---------- */
+
+.bot-msg{
+
+    background:white;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    color:#334155;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+    box-shadow:
+    0 10px 25px rgba(15,23,42,.06);
+
+    animation:fadeUp .4s ease;
+
+}
+
+/* ---------- Quick Buttons ---------- */
+
+.quick-buttons{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    margin-top:18px;
+
+}
+
+.quick-buttons button{
+
+    background:white;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:14px;
+
+    font-weight:600;
+
+    color:#334155;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+    0 6px 18px rgba(15,23,42,.06);
+
+}
+
+.quick-buttons button:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+/* ---------- Input ---------- */
+
+.chat-input{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px;
+
+    background:white;
+
+    border-top:1px solid #e2e8f0;
+
+}
+
+.chat-input input{
+
+    flex:1;
+
+    height:50px;
+
+    border:1px solid #dbe4ee;
+
+    border-radius:30px;
+
+    padding:0 18px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.chat-input input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:
+    0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.chat-input button{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.chat-input button:hover{
+
+    background:#1d4ed8;
+
+    transform:scale(1.08);
+
+}
+
+/* ---------- User Bubble ---------- */
+
+.user-msg{
+
+    margin-left:auto;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    margin-top:14px;
+
+    width:fit-content;
+
+    max-width:80%;
+
+}
+
+/* ---------- AI Bubble ---------- */
+
+.ai-msg{
+
+    margin-top:14px;
+
+    background:white;
+
+    color:#334155;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    width:fit-content;
+
+    max-width:80%;
+
+    box-shadow:
+    0 6px 18px rgba(0,0,0,.05);
+
+}
+
+/* ---------- Typing Loader ---------- */
+
+.typing{
+
+    display:flex;
+
+    gap:5px;
+
+    padding:14px;
+
+}
+
+.typing span{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#94a3b8;
+
+    animation:typing 1.2s infinite;
+
+}
+
+.typing span:nth-child(2){
+
+animation-delay:.2s;
+
+}
+
+.typing span:nth-child(3){
+
+animation-delay:.4s;
+
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes typing{
+
+0%,80%,100%{
+
+transform:scale(.6);
+
+opacity:.5;
+
+}
+
+40%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(-10px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px){
+
+.chat-btn{
+
+top:auto;
+bottom:18px;
+right:18px;
+
+width:58px;
+height:58px;
+
+}
+
+.tooltip{
+
+display:none;
+
+}
+
+.chat-container{
+
+left:10px;
+right:10px;
+
+width:auto;
+
+height:82vh;
+
+top:auto;
+
+bottom:90px;
+
+border-radius:24px;
+
+}
+
+.quick-buttons{
+
+grid-template-columns:1fr;
+
+}
+
+.chat-header{
+
+padding:18px;
+
+}
+
+.chat-input{
+
+padding:12px;
+
+}
+
+}

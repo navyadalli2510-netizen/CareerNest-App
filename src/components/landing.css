@@ -1,0 +1,192 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #03132f;
+}
+
+/* Landing Page */
+.landing-container {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    90deg,
+    #03132f 0%,
+    #1d2d49 50%,
+    #03132f 100%
+  );
+}
+
+.landing-content {
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+}
+
+/* Logo */
+.logo {
+  font-size: 120px;
+  font-weight: 1000;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.logo span {
+  color: #38bdf8;
+}
+
+
+/* Subtitle */
+.subtitle {
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 25px;
+  margin-bottom: 55px;
+}
+
+/* Button */
+.get-started-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background: #42bfff;
+  color: #000;
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  padding: 18px 60px;
+  border-radius: 50px;
+
+  transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(66, 191, 255, 0.4);
+}
+
+/* ========================= */
+/* Large Laptop */
+/* ========================= */
+@media (max-width: 1400px) {
+  .logo {
+    font-size: 5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .get-started-btn {
+    font-size: 1.8rem;
+  }
+}
+
+/* ========================= */
+/* Laptop */
+/* ========================= */
+@media (max-width: 1024px) {
+  .logo {
+    font-size: 4.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 45px;
+  }
+
+  .get-started-btn {
+    font-size: 1.5rem;
+    padding: 16px 50px;
+  }
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+@media (max-width: 768px) {
+  .landing-content {
+    width: 92%;
+  }
+
+  .logo {
+    font-size: 3.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    margin-top: 18px;
+    margin-bottom: 35px;
+  }
+
+  .get-started-btn {
+    font-size: 1.2rem;
+    padding: 14px 42px;
+  }
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+@media (max-width: 480px) {
+  .landing-content {
+    width: 95%;
+  }
+
+  .logo {
+    font-size: 2.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .get-started-btn {
+    width: 220px;
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+}
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+@media (max-width: 320px) {
+  .logo {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .get-started-btn {
+    width: 190px;
+    font-size: 1rem;
+  }
+}

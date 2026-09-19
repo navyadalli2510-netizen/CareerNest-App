@@ -1,0 +1,222 @@
+/* =========================================================
+   RECRUITER NAVBAR
+========================================================= */
+
+.recruiter-navbar {
+  position: fixed;
+
+  top: 0;
+  left: 290px;
+  right: 0;
+
+  height: 64px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e9f1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  z-index: 1000;
+
+  box-shadow: 0 2px 8px rgba(20, 32, 55, 0.06);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.navbar-title {
+  font-size: 21px;
+  font-weight: 700;
+  color: #172033;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.navbar-welcome {
+  font-size: 14px;
+  color: #69758a;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.navbar-profile {
+  position: relative;
+}
+
+.navbar-profile-circle {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #2864df;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+========================================================= */
+
+.navbar-profile-menu {
+  position: absolute;
+
+  right: 0;
+  top: 45px;
+
+  width: 140px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e9f1;
+  border-radius: 9px;
+
+  padding: 6px;
+
+  box-shadow: 0 8px 25px rgba(20, 30, 50, 0.15);
+
+  z-index: 1100;
+}
+
+.navbar-profile-menu button {
+  width: 100%;
+
+  border: none;
+  background: transparent;
+
+  padding: 9px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  color: #172033;
+
+  font-size: 14px;
+}
+
+.navbar-profile-menu button:hover {
+  background: #f4f7fb;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.navbar-logout {
+  border: none;
+
+  background: #ef4444;
+  color: white;
+
+  border-radius: 7px;
+
+  padding: 9px 15px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.navbar-logout:hover {
+  background: #dc2626;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .recruiter-navbar {
+    left: 75px;
+    height: 64px;
+    padding: 0 20px;
+  }
+
+  .navbar-welcome {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .recruiter-navbar {
+    left: 62px;
+    height: 58px;
+    padding: 0 12px;
+  }
+
+  .navbar-title {
+    font-size: 18px;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .navbar-logout {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .navbar-profile-circle {
+    width: 34px;
+    height: 34px;
+  }
+}
