@@ -1,4 +1,4 @@
-import "./addJob.css";
+import "./addjob.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
