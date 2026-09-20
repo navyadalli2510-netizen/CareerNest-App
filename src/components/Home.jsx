@@ -2,7 +2,7 @@ import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ChatBot from "./ChatBot";
+import ChatBot from "./Chatbot";
 
 function Home() {
   const navigate = useNavigate();

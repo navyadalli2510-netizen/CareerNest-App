@@ -1,4 +1,4 @@
-import "./Login.css";
+import "./login.css";
 import { Mail, Lock } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
