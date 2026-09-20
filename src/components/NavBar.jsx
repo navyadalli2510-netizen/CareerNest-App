@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { LogOut, UserRound } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./Navbar.css";
+import "./NavBar.css";
 
 function Navbar() {
   const navigate = useNavigate();

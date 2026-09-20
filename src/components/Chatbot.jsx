@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Bot, X, Send, Sparkles } from "lucide-react";
-import "./ChatBot.css";
+import "./Chatbot.css";
 
 function ChatBot() {
 
